@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="../javascript/my_js.js">
+    </script>
+    <link rel="stylesheet" type="text/css" href="../css/javascript_css.css">
+
+
+    <script >
+    $(document).ready(testJQuery);
+    </script>
+
+    <style media="screen">
+      div.ex{
+        background-color: #e5eecc;
+        padding: 7px;
+        border: solid 1px #c3c3c3;
+      }
+    </style>
+    <script type="text/javascript">
+    // $(document).ready(function(){
+    //   // alert("test");
+    // // $(".btn1").click(function(){
+    //   // $('.textTest').load('../res/test_text.txt');
+    // // })
+    // })
+    </script>
+  </head>
+  <body onload="jquery_onload()"  style="height:5000px;">
+    <script>
+      person = new person("bill","gates",56,"blue");
+      // person.firstname = "bill";
+      // person.lastname = "bill";
+      // person.age = 56;
+      // person.eyecolor = "blue";
+      person.changeName("steve");
+      document.write(person.lastname+" is "+person.age+" years old.");
+
+    </script>
+
+    <p id="demo">javascript 能改变html 元素内容</p>
+
+    <button type="button" onclick="myFunction()" name="button">点击这里</button>
+    <input type="text" name="" value="" id="input">
+    <button type="button" onclick="checkNumber()" name="button">点击这里</button>
+    <h1 id="h01"></h1>
+    <br/>
+    <p>如果您点击我，我会消失。</p>
+    <p>点击我，我会消失。</p>
+    <p>也要点击我哦。</p>
+
+    <h3>办事处</h3>
+    <div class="ex">
+      <button class="hide" type="button" name="button">隐藏</button>
+      <p>联系人：张先生<br />
+      北三环中路 100 号<br />
+      北京</p>
+
+    </div>
+
+    <p id="p1">如果点击“隐藏”按钮，我就会消失。</p>
+    <button id="hide" type="button">隐藏</button>
+    <button id="show" type="button">显示</button>
+    <br>
+    <button onclick="testFadeIn()" class="fadeInButton" type="button" name="button">淡入淡出</button>
+    <br>
+    <div id="divFadeIn01">
+
+    </div>
+    <br>
+    <div id="divFadeIn02">
+
+    </div>
+    <br>
+    <div id="divFadeIn03">
+
+    </div>
+    <br>
+    <div class="panel">
+      <p>W3School - 领先的 Web 技术教程站点</p>
+      <p>在 W3School，你可以找到你所需要的所有网站建设教程。</p>
+    </div>
+    <p class="flip" onclick="flip_click()">点击这里</p>
+    <br>
+    <button type="button" name="button" onclick="startAnimate()">开始动画</button>
+    <div class="divAnimate">
+      hello
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button type="button" name="button" onclick="testLink()">方法链接</button>
+    <p class="linkP">链接效果展示</p>
+    <br>
+    <br>
+    <button type="button" name="button" onclick="dom()">方法链接</button>
+    <p class="test">链接效果展示 <b>粗体</b> </p>
+    <input type="text" name="" value="kkk" class="inputClass">
+    <p><a href="https://www.w3schools.com" class="testattr" >W3Schools.com</a></p>
+    <br>
+    <br>
+    <button type="button" name="button" onclick="getOrder()">方法链接</button>
+    <p class="order1">This is a <b>bold</b> paragraph. </p>
+    <p class="order2">This is another <b>bold</b> paragraph.</p>
+    <p> <a href="https://www.w3schools.com" class="w3s" title="w3s">w3schools.com</a> </p>
+    <p >test append</p>
+    <br>
+    <br>
+    <button type="button" name="button" onclick="insertContent()">insert</button>
+    <img src="../res/flower.png" alt="jQuery" width="100px" height="100px">
+    <p>remove</p>
+    <p class="removeP">remove</p>
+    <p class="removeP">remove</p>
+    <br>
+    <br>
+    <button type="button" name="button" onclick="testEmpty()">empty</button>
+    <div class="emptyDiv">
+      <p>empty1 </p>
+      <p>empty2 </p>
+    </div>
+    <br>
+    <button type="button" name="button" onclick="useAddClass()">addClass</button>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <p>p1</p>
+    <p>p2</p>
+    <div>
+      div
+    </div>
+    <br>
+    <br>
+    <button class="btn1" type="button" name="button">loadtest</button>
+    <!-- <p class="textTest">hi</p> -->
+    <h1 class="textTest">test</h1>
+    <br>
+    <button onclick="getData()" type="button" name="button">get</button>
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,73 @@
+div.imgcss{
+  margin: 3px;
+  border: 1px solid #bebebe;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+}
+div.imgcss img{
+  display: inline;
+  margin: 3px;
+  border: 1px solid #bebebe;
+}
+div.imgcss  img{
+  border: 1px solid #333333;
+}
+div.imgcss a:hover{
+    border: 1px solid #333333;
+}
+div.desc{
+  text-align: center;
+  font-weight: normal;
+  width: 150px;
+  font-size: 12px;
+  margin: 10px 5px 10px 5px;
+}
+div.radius{
+  border: 2px solid;
+  border-radius: 25px;
+  padding: 10px 40px;
+  background-color: #dddddd;
+  width: 350px;
+  margin: 0px;
+  float: left;
+  box-shadow: 10px 10px 5px #888888;
+  border-image: url("../res/snake.png") 30 30 round;
+
+}
+
+.transform{
+  margin: 30px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  transform: rotate(9deg);
+}
+.transition{
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+
+  transition: width 2s,height 2s linear 2s;
+}
+div:hover{
+  width: 200px;
+  width: 200px;
+  transform: rotate(180deg);
+}
+.animations{
+  width: 100px;
+  height: 100px;
+  background: red;
+  animation: myfirst 5s;
+  /* -webkit-animation:myfirst 5s; */
+}
+@keyframes myfirst {
+  from{
+    background: red;
+  }
+  to{
+    background: yellow;
+  }
+}

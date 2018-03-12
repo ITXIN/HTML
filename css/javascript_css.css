@@ -1,0 +1,41 @@
+ #divFadeIn01{
+  background-color: red;
+}
+#divFadeIn02{
+  background-color: green;
+
+}
+#divFadeIn03{
+  background-color: blue;
+ }
+#divFadeIn01,#divFadeIn02,#divFadeIn03{
+  width: 100px;
+  height: 100px;
+  /* display: none; */
+}
+div.panel,p.flip{
+  margin: 0px;
+  padding: 5px;
+  text-align: center;
+  background: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+div.panel{
+  height: 120px;
+  /* display: none; */
+}
+div.divAnimate{
+  background: #98bf21;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+}
+
+.important{
+  font-weight: bold;
+  font-size: xx-large;
+}
+.blue{
+  color: blue;
+}

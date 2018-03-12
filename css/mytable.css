@@ -1,0 +1,69 @@
+/* ul{
+  list-style: square;
+} */
+/* ul li{
+  list-style-image: url("../res/眼镜蛇.png");
+} */
+/* li{
+  list-style: url("../res/眼镜蛇.png") square inside;
+} */
+ol{
+  list-style-type: lower-greek;
+}
+ul.inside{
+  list-style-position: inside;
+}
+ul.outside{
+  list-style-position: outside;
+}
+
+table,th,td{
+  border: 1px solid green;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th{
+  height: 50px;
+  background-color: green;
+  color: white;
+}
+td{
+  text-align: center;
+  /* height: 100px; */
+  vertical-align: bottom;
+  padding: 15px;
+}
+
+
+caption{
+  caption-side: top;
+  background-color: green;
+  color: white;
+}
+#customers{
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+  empty-cells: hide;
+}
+#customers td,#customers th{
+  font-size: 1em;
+  border: 1px solid #98bf21;
+  padding: 3px 7px 2px 7px;
+}
+#customers th{
+  font-size: 1.1em;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #A7C942;
+  color: #FFFFFF;
+}
+#customers tr.alt td{
+  color: #000000;
+  background-color: #EAF2D3;
+}
