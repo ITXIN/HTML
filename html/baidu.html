@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    html,
+    body,
+    div,
+    ul,
+    li,
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      padding-top: 30px;
+      padding-right: 20px;
+      font-size: 14px;
+      height: 40px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .clearfix:after {
+      display: block;
+      content: " ";
+      width: 0;
+      height: 0;
+    }
+
+    .header .nav {
+      float: right;
+      height: 40px;
+    }
+
+    .header .nav>li {
+      float: left;
+      margin-left: 10px;
+      padding: 3px 5px;
+    }
+
+    .header .nav>li>a {
+      font-weight: bold;
+      color: #000000;
+    }
+
+    .header .nav .font,
+    .produce {
+      position: relative;
+      font-weight: normal;
+    }
+
+    .header .nav .menu2:hover .menu {
+      display: block;
+    }
+
+    .header .nav .font>a {
+      font-weight: normal;
+    }
+
+    .header .nav .produce {
+      background-color: #3487F2;
+    }
+
+    .header .nav .produce>a {
+      font-weight: normal;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    .mainbody {
+      width: 600px;
+      height: 400px;
+      margin: auto;
+    }
+
+    .mainbody img {
+      width: 210px;
+      height: 120px;
+      margin: 0px 100px;
+    }
+
+    .mainbody .search-box {
+      width: 500px;
+      height: 30px;
+      border: 1px solid #3487F2;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+
+    .mainbody .btn {
+      width: 70px;
+      height: 34px;
+      color: #FFFFFF;
+      background: #3487F2;
+      border: 1px solid #3487F2;
+      margin-left: -4px;
+      cursor: pointer;
+    }
+
+    .footer {
+      width: 350px;
+      margin: 80px auto;
+      font-size: 12px;
+    }
+
+    .footer ul {
+      height: 20px;
+    }
+
+    .footer ul li {
+      float: left;
+      margin: 0 20px;
+      list-style: none;
+    }
+
+    .footer p {
+      color: #9E9E9E;
+    }
+
+    .footer p a {
+      color: #9E9E9E;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header clearfix">
+    <ul class="nav">
+      <li><a href="#" target="_black">新闻</a></li>
+      <li><a href="#" target="_black">hao123</a></li>
+      <li><a href="#" target="_black">地图</a></li>
+      <li><a href="#" target="_black">视频</a></li>
+      <li><a href="#" target="_black">贴吧</a></li>
+      <li class="font"><a href="#" target="_black">登录</a></li>
+      <li class="font menu2"><a href="#" target="_black">设置 </a></li>
+      <li class="produce menu2"><a href="#" target="_black">更多产品</a></li>
+    </ul>
+  </div>
+
+
+
+  <div class="mainbody clearfix">
+    <img src="https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super" style="background-color: blue;" />
+    <div class="search">
+      <form action="#" method="post">
+        <input type="text" class="search-box" />
+        <input type="submit" value="百度一下" class="btn">
+      </form>
+    </div>
+  </div>
+  <div class="footer clearfix">
+    <ul>
+      <li><a href="#" target="_black">把百度设为首页</a></li>
+      <li><a href="#" target="_black">关于百度</a></li>
+      <li><a href="#" target="_black">AboutBaidu</a></li>
+    </ul>
+    <p>©2015 Baidu <a href="#" target="_black">使用百度前必读</a> <a href="#" target="_black">意见反馈</a> 京ICP证030173号 </p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      height: 50px;
+      margin: 30px 70px;
+      background-color: yellow;
+    }
+
+    .main {
+      width: 900px;
+      margin: 70px auto;
+      position: relative;
+      background-color: red;
+    }
+
+    .main .loginbox {
+      float: right;
+      width: 315px;
+      height: 335px;
+      top: 0;
+      right: 0;
+      border: 2px solid #BBBBBB;
+      border-top: 2px solid #FF8C00;
+      /* background-color: cyan; */
+    }
+
+    .main .loginbox .warp {
+      width: 250px;
+      margin: 0 auto;
+    }
+
+    .loginbox .warp h3 {
+      float: left;
+      width: 125px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 14px;
+      text-align: center;
+      border-bottom: 1px solid #9E9E9E;
+      color: #9E9E9E;
+    }
+
+    .loginbox .warp .speed-login {
+      display: none;
+      width: 250px;
+      text-align: center;
+    }
+
+    .loginbox .warp .speed-login img {
+      margin: 25px 65px;
+    }
+
+    .loginbox .warp .speed-login h5 {
+      font-size: 14px;
+      color: #9E9E9E;
+    }
+
+    .loginbox .warp .speed-login p {
+      font-size: 12px;
+      margin-top: 15px;
+    }
+
+    .loginbox .warp .speed-login p a {
+      text-decoration: none;
+      color: #FF8C00;
+    }
+
+    .loginbox .warp .speed-login p a:hover {
+      text-decoration: underline;
+    }
+
+    .loginbox .warp .psd-login {
+      width: 250px;
+      font-size: 12px;
+    }
+
+    .warp .psd-login form {
+      width: 250px;
+      height: 120px;
+    }
+
+    .warp .psd-login input {
+      margin-top: 18px;
+      width: 200px;
+      height: 33px;
+      border: 1px solid #BBBBBB;
+    }
+
+    .psd-login .user {
+      background: url("https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super") no-repeat;
+      padding-left: 50px;
+      color: #BBBBBB;
+    }
+
+    .psd-login .psd {
+      background: url("https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super") no-repeat;
+      padding-left: 50px;
+    }
+
+    .psd-login .forget {
+      margin-top: 30px;
+    }
+
+    .psd-login .forget a {
+      width: 250px;
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .psd-login .forget a:hover {
+      text-decoration: underline;
+      color: #FF8C00;
+    }
+
+    .psd-login .login {
+      width: 245px;
+      height: 30px;
+      line-height: 30px;
+      background: #FF8C00;
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .psd-login ul {
+      margin-top: 20px;
+    }
+
+    .psd-login ul li {
+      list-style: none;
+      width: 60px;
+      height: 25px;
+      line-height: 25px;
+      float: left;
+      padding-left: 20px;
+    }
+
+    .psd-login ul li a {
+      text-decoration: none;
+      font-weight: 10px;
+    }
+
+    .psd-login ul li a:hover {
+      text-decoration: underline;
+      color: #FF8C00;
+    }
+
+    .psd-login ul .weibo {
+      background: url(images/weibo.jpg) no-repeat;
+    }
+
+    .psd-login ul .alipay {
+      background: url(images/alipay.jpg) no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <img src="https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super" style="width:auto;height:100px;margin-top:-40px;"/>
+  </div>
+  <div class="main">
+    <img src="https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super" style="width:auto;height:100px;margin-top:-40px;" />
+    <div class="loginbox">
+      <div class="warp">
+        <h3><a href="#" class="login1">快速登录</a></h3>
+        <h3><a href="#" class="login2">账号密码登录</a></h3>
+        <div class="speed-login">
+          <img src="https://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png?where=super" style="width:auto;height:100px;margin-top:-40px;background-color:red;" />
+          <h5>手机扫码  安全登录</h5>
+          <p>使用<a href="#">手机淘宝</a>、<a href="#">阿里钱盾</a>扫描二维码</p>
+        </div>
+        <div class="psd-login">
+          <from>
+            <input type="text" class="user" placeholder="会员名/邮箱" required="required" />
+            <input type="password" class="psd" required="required" />
+          </from>
+          <div class="forget">
+            <a href="#">忘记登录密码?</a>
+            <a href="#">免费注册</a>
+          </div>
+          <div class="login">
+            <a href="#" style="color:#FFFFFF">登  录</a>
+          </div>
+          <ul>
+            <li class="weibo"><a href="#">微博登录</a></li>
+            <li class="alipay"><a href="#">支付宝</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
