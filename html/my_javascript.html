@@ -31,6 +31,159 @@
     </script>
   </head>
   <body onload="jquery_onload()"  style="height:5000px;">
+    <script type="text/javascript">
+      var
+        fileInput = document.getElementById('test-image-file'),
+        info = document.getElementById('test-file-info'),
+        preview = document.getElementById('test-image-preview');
+        fileInput.addEventListener('change',function () {
+          preview.style.backgroundImage = '';
+          if (!fileInput.value) {
+            info.innerHTML = 'no choice';
+            return;
+          }
+          var file = fileInput.files[0];
+          info.innerHTML = '文件'+file.name+'<br/>'+
+                            '大小'+file.size+'<br/>'+
+                            '修改'+file.lastModifiedDate+'<br/>'+
+            if (file.type !== 'image/jpge' && file.type != 'image/png' && file.type !== 'image/gif') {
+              alert('不是有效的图片文件！');
+              return;
+            }
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+              var data  = e.target.result;
+              preview.style.backgroundImage = 'url('+data+')';
+            };
+            reader.readAsDataURL(file);
+
+
+        })
+    </script>
+
+
+    <form id="login-form" method="post" onsubmit="return checkForm()">
+    <input type="text" id="username" name="username">
+    <input type="password" id="password" name="password">
+    <button type="submit">Submit</button>
+    </form>
+    <script>
+    function checkForm() {
+        var pwd = document.getElementById('password');
+        // 把用户输入的明文变为MD5:
+        pwd.value = toMD5(pwd.value);
+        // 继续下一步:
+        return true;
+    }
+    </script>
+
+
+    <div id="p-id">
+
+    </div>
+
+    <script type="text/javascript">
+    // 获取<p id="p-id">...</p>
+    var p = document.getElementById('p-id');
+    // 设置文本为abc:
+    p.innerHTML = 'ABC'; // <p id="p-id">ABC</p>
+    // 设置HTML:
+    p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
+    // <p>...</p>的内部结构已修改
+    var d = document.createElement('style');
+    d.setAttribute('type', 'text/css');
+    d.innerHTML = 'p { color: red }';
+    document.getElementsByTagName('head')[0].appendChild(d);
+    </script>
+
+
+
+    <script type="text/javascript">
+        function Student(props) {
+          this.name = props.name || '匿名'; // 默认值为'匿名'
+          this.grade = props.grade || 1; // 默认值为1
+        }
+
+        Student.prototype.hello = function () {
+          // alert('Hello, ' + this.name + '!');
+        };
+
+        function createStudent(props) {
+          return new Student(props || {})
+        }
+        var xiaoming = createStudent({
+            name: '小明'
+        });
+
+        // alert('hello'+xiaoming.name+'age'+xiaoming.grade)
+    </script>
+
+
+    <script type="text/javascript">
+
+    function Student(name) {
+      this.name = name;
+      this.hello = function () {
+          // alert('Hello, ' + this.name + '!');
+      }
+    }
+
+    var xiaoming = new Student('小明');
+    xiaoming.name; // '小明'
+    xiaoming.hello(); // Hello, 小明!
+
+
+
+    </script>
+    <script type="text/javascript">
+      var fn = x => x * x;
+      document.write(fn(2)+'<br/>')
+    </script>
+
+    <script type="text/javascript">
+    var xiaoming = {
+      name: '小明',
+      birth: 1990,
+      age: function () {
+          var y = new Date().getFullYear();
+          return y - this.birth;
+      }
+    };
+
+    xiaoming.age; // function xiaoming.age()
+    xiaoming.age(); // 今年调用是25,明年调用就变成26了
+    document.write(xiaoming.age()+'<br/>')
+
+    </script>
+
+
+
+    <script type="text/javascript">
+    function count() {
+    var arr = [];
+    for (var i=1; i<=3; i++) {
+        arr.push((function (n) {
+            return function () {
+                return n * n;
+            }
+        })(i));
+    }
+    return arr;
+    }
+    var results = count();
+    var f1 = results[0];
+    // var f2 = results[1];
+    // var f3 = results[2];
+    document.write(f1()+'<br/>')
+    // document.write(f1()+'<br/>'+f2()+'<br/>'+f3()+'<br/>')
+
+
+    </script>
+
+
+
+
     <script>
       person = new person("bill","gates",56,"blue");
       // person.firstname = "bill";
