@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // if (NaN === NaN) {
+        //     alert('NaN === NaN');
+        // } else {
+        //     if (isNaN(NaN)) {
+        //         alert('isNaN(NaN)');
+        //     } else {
+        //         alert('! isNaN');
+        //     }
+        // }
+        // var person = {
+        //     name: 'jack',
+        //     age: 20,
+        //     sex: 0,
+        //     tags: ['23', 'iOS'],
+        //     zipcode: null,
+        // };
+        // alert(person.name + person.age + person.tags[0]);
+
+        // var name = '小明';
+        // var age = 20;
+        // var message = `你好, ${name}, 你今年${age}岁了!`;
+        // alert(message);
+
+
+        // var xiaoming = {
+        //     name: '小明'
+        // };
+        // xiaoming.age; // undefined
+        // xiaoming.age = 18; // 新增一个age属性
+        // xiaoming.age; // 18
+        // alert(xiaoming.age);
+        // delete xiaoming.age; // 删除age属性
+        // alert(xiaoming.age);
+
+        // alert('name' in xiaoming);
+        // alert('sex' in xiaoming);
+
+        // alert(xiaoming.hasOwnProperty('age')); // true
+        // alert(xiaoming.hasOwnProperty('toString')); // false
+
+        // function abs(x) {
+        //     if (typeof x !== 'number') {
+        //         // throw 'Not a number';
+        //         return 'Not a number';
+        //     }
+        //     if(x >= 0){
+        //         return x;
+        //     }else{
+        //         return -x;
+        //     }
+        // }
+        // alert(abs('kk'));
+        // alert(abs(10));
+        // alert(abs(-10));
+
+
+        // function foo(x) {
+        //     console.log('x = ' + x); // 10
+        //     for (var i = 0; i < arguments.length; i++) {
+        //         console.log('arg ' + i + ' = ' + arguments[i]); // 10, 20, 30
+        //     }
+        // }
+        // foo(10, 20, 30);
+
+
+
+    </script>
+
+    <script type="text/javascript" src="../javascript/test01.js"></script>
+
+</head>
+
+<body>
+    你好
+    <button type="button" onclick="window.foo()" name="button">window.foo()</button>
+    <button type="button" onclick="foo()" name="button">foo()</button>
+</body>
+
+</html>
