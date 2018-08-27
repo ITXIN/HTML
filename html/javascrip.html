@@ -77,12 +77,23 @@
 
     <script type="text/javascript" src="../javascript/test01.js"></script>
 
+    
+
+
 </head>
 
 <body>
     你好
     <button type="button" onclick="window.foo()" name="button">window.foo()</button>
     <button type="button" onclick="maptest()" name="button">foo()</button>
+    <a id="test-link" href="#0">点我试试</a>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        var a = $('#test-link');
+        a.on('click', function () {
+            alert('Hello!');
+        });
+    </script>
 </body>
 
 </html>
