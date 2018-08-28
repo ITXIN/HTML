@@ -29,3 +29,49 @@ function maptest() {
   console.log(results);
   alert(results);
 }
+
+function reducetest() {
+  var arr = [1, 3, 5, 7, 9];
+  arr.reduce(function (x, y) {
+    alert(x * 10 + y);
+    // return x + y;
+    return x * 10 + y;
+  }); // 25
+}
+
+
+function filtertest() {
+  // var arr = [1,3,4,5,6,7,8,9];
+  // var r = arr.filter(function (x) {
+  //   return x%2 != 0;
+  // });
+  // alert(r);
+
+  var arr = ['A', '', 'B', null, undefined, 'C', '  '];
+  var r = arr.filter(function (s) {
+      return s && s.trim(); // 注意：IE9以下的版本没有trim()方法
+  });
+  alert(r); // ['A', 'B', 'C']
+
+}
+
+
+function* foo(x) {
+  yield x + 1;
+  yield x + 2;
+  return x + 3;
+}
+
+
+var xiaoming = {
+  name: '小明',
+  age: 14,
+  gender: true,
+  height: 1.65,
+  grade: null,
+  'middle-school': '\"W3C\" Middle School',
+  skills: ['JavaScript', 'Java', 'Python', 'Lisp']
+};
+
+var s = JSON.stringify(xiaoming ,null, '  ');
+alert(s);
