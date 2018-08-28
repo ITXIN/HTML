@@ -80,12 +80,24 @@
     $.fn.jquery
     </script>
 
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        var a = $('#test-link');
+        a.on('click', function () {
+            alert('Hello!');
+        });
+    </script>
+
+
 </head>
 
 <body>
     你好
     <button type="button" onclick="window.foo()" name="button">window.foo()</button>
+
     <button type="button" onclick="filtertest()" name="button">reducetest()</button>
+    <button type="button" onclick="testajax()" name="button">foo()</button>
+    <a id="test-link" href="#0">点我试试</a>
 </body>
 
 </html>
