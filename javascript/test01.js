@@ -34,14 +34,14 @@ function test(resolve, reject) {
   var timeOut = Math.random() * 2;
   // log('set timeout to: ' + timeOut + ' seconds.');
   setTimeout(function () {
-      if (timeOut < 1) {
-          // log('call resolve()...');
-          resolve('200 OK');
-      }
-      else {
-          // log('call reject()...');
-          reject('timeout in ' + timeOut + ' seconds.');
-      }
+    if (timeOut < 1) {
+      // log('call resolve()...');
+      resolve('200 OK');
+    }
+    else {
+      // log('call reject()...');
+      reject('timeout in ' + timeOut + ' seconds.');
+    }
   }, timeOut * 1000);
 }
 
@@ -75,17 +75,17 @@ function test(resolve, reject) {
 function ajax(method, url, data) {
   var request = new XMLHttpRequest();
   return new Promise(function (resolve, reject) {
-      request.onreadystatechange = function () {
-          if (request.readyState === 4) {
-              if (request.status === 200) {
-                  resolve(request.responseText);
-              } else {
-                  reject(request.responseText);
-              }
-          }
-      };
-      request.open(method, url);
-      request.send(data);
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+        if (request.status === 200) {
+          resolve(request.responseText);
+        } else {
+          reject(request.responseText);
+        }
+      }
+    };
+    request.open(method, url);
+    request.send(data);
   });
 }
 
@@ -121,3 +121,54 @@ var p2 = new Promise(function (resolve, reject) {
 // a.on('click', function () {
 //     alert('Hello!');
 // });
+
+
+// var jqxhr = $.ajax('/api/categories', {
+//   dataType: 'json'
+// }).done(function (data) {
+//   ajaxLog('成功, 收到的数据: ' + JSON.stringify(data));
+// }).fail(function (xhr, status) {
+//   ajaxLog('失败: ' + xhr.status + ', 原因: ' + status);
+// }).always(function () {
+//   ajaxLog('请求完成: 无论成功或失败都会调用');
+// });
+
+function testajax() {
+  alert('ajax');
+  var jqxhr = $.getJSON('http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice', {
+    // dataType: 'json'
+  }).done(function (data) {
+    ajaxLog('cg');
+    alert('成功');
+  }).fail(function (xhr, status) {
+    ajaxLog(xhr.status + status);
+    alert('失败');
+  }).always(function () {
+    ajaxLog('请求完成，无论成功失败');
+    alert('请求完成，无论成功失败');
+  });
+}
+
+
+// var r1, r2, s = null;
+// try {
+//     r1 = s.length; // 此处应产生错误
+//     r2 = 100; // 该语句不会执行
+// } catch (e) {
+//     console.log('出错了：' + e);
+// } finally {
+//     console.log('finally');
+// }
+// console.log('r1 = ' + r1); // r1应为undefined
+// console.log('r2 = ' + r2); // r2应为undefined
+
+
+var r1, s2, s = null;
+try {
+  r1 = s.length;
+  r2 = 100;
+} catch (e) {
+  alert('error🐲：'+e);
+}finally{
+  alert('finaly');
+}
