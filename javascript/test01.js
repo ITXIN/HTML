@@ -73,22 +73,22 @@ var xiaoming = {
   skills: ['JavaScript', 'Java', 'Python', 'Lisp']
 };
 
-var s = JSON.stringify(xiaoming ,null, '  ');
-alert(s);
-function test(resolve, reject) {
-  var timeOut = Math.random() * 2;
-  // log('set timeout to: ' + timeOut + ' seconds.');
-  setTimeout(function () {
-    if (timeOut < 1) {
-      // log('call resolve()...');
-      resolve('200 OK');
-    }
-    else {
-      // log('call reject()...');
-      reject('timeout in ' + timeOut + ' seconds.');
-    }
-  }, timeOut * 1000);
-}
+// var s = JSON.stringify(xiaoming ,null, '  ');
+// alert(s);
+// function test(resolve, reject) {
+//   var timeOut = Math.random() * 2;
+//   // log('set timeout to: ' + timeOut + ' seconds.');
+//   setTimeout(function () {
+//     if (timeOut < 1) {
+//       // log('call resolve()...');
+//       resolve('200 OK');
+//     }
+//     else {
+//       // log('call reject()...');
+//       reject('timeout in ' + timeOut + ' seconds.');
+//     }
+//   }, timeOut * 1000);
+// }
 
 // var p1 = new Promise(test);
 
@@ -178,21 +178,21 @@ var p2 = new Promise(function (resolve, reject) {
 //   ajaxLog('请求完成: 无论成功或失败都会调用');
 // });
 
-function testajax() {
-  alert('ajax');
-  var jqxhr = $.getJSON('http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice', {
-    // dataType: 'json'
-  }).done(function (data) {
-    ajaxLog('cg');
-    alert('成功');
-  }).fail(function (xhr, status) {
-    ajaxLog(xhr.status + status);
-    alert('失败');
-  }).always(function () {
-    ajaxLog('请求完成，无论成功失败');
-    alert('请求完成，无论成功失败');
-  });
-}
+// function testajax() {
+//   alert('ajax');
+//   var jqxhr = $.getJSON('http://api.money.126.net/data/feed/0000001,1399001?callback=refreshPrice', {
+//     // dataType: 'json'
+//   }).done(function (data) {
+//     ajaxLog('cg');
+//     alert('成功');
+//   }).fail(function (xhr, status) {
+//     ajaxLog(xhr.status + status);
+//     alert('失败');
+//   }).always(function () {
+//     ajaxLog('请求完成，无论成功失败');
+//     alert('请求完成，无论成功失败');
+//   });
+// }
 
 
 // var r1, r2, s = null;
@@ -208,12 +208,24 @@ function testajax() {
 // console.log('r2 = ' + r2); // r2应为undefined
 
 
-var r1, s2, s = null;
-try {
-  r1 = s.length;
-  r2 = 100;
-} catch (e) {
-  alert('error🐲：'+e);
-}finally{
-  alert('finaly');
+// var r1, s2, s = null;
+// try {
+//   r1 = s.length;
+//   r2 = 100;
+// } catch (e) {
+//   alert('error🐲：'+e);
+// }finally{
+//   alert('finaly');
+// }
+
+
+const ROUTER_DEFAULT_CONFIG = {
+  waitForData: true,
+  transitionOnLoad: true
 }
+
+// function add(...rou) {
+//   alert('add');
+// }
+// add();
+alert(...ROUTER_DEFAULT_CONFIG);
